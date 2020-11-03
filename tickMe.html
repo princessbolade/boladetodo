@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- card body -->
+    <div class="container">
+      <!-- header begins -->
+      <div class="header">
+        <div class="date"><span></span></div>
+        <p class="tasknum">12 tasks</p>
+      </div>
+      <br />
+      <hr />
+      <!-- header ends -->
+
+      <!-- add button -->
+      <div class="addItems">
+        <div class="addBtn" id="modalBtn">
+          <a href="#"><i class="fa fa-plus addIcon" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="bg-modal">
+        <div class="addModal">
+          <div class="close">+</div>
+          <input
+            type="text"
+            id="text"
+            class="addInput"
+            placeholder="Add a Task"
+            value=""
+          />
+          <button class="addtodo" type="submit">Add todo</button>
+        </div>
+      </div>
+
+      <!-- add button ends -->
+
+      <div class="content">
+        <ul id="lists">
+          <!-- <li class="listItems">
+            <input onclick="updateTask(this)" type="checkbox" id="checkbox" />
+            Go to the mall
+            <a onclick="deleteTodo(this)" href=""
+              ><i class="far fa-trash-alt delete"></i
+            ></a>
+            <a href="" class="edit">edit</a>
+          </li>
+          <li class="listItems">
+            <input class="action" onclick="updateTask(this)" type="checkbox" id="checkbox" />
+            Go to the mall
+            <a onclick="deleteTodo(this)" href=""
+              ><i class="far fa-trash-alt delete"></i
+            ></a>
+            <a href="" class="edit">edit</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
