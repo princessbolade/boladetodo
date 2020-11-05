@@ -70,6 +70,14 @@ document.querySelector(".close").addEventListener("click", function () {
 // delete todo
 
 const deleteTodo = (node) => {
+  //confirm("Are you sure you want to delete this task");
+  var txt;
+  var r = confirm("Are you sure you want to delete this task?");
+  if (r == true) {
+    txt = "Task deleted";
+  } else {
+    return false;
+  }
   const mainNode = node.parentNode;
   const parent = mainNode.parentNode;
   const text = mainNode.textContent.trim();
@@ -96,7 +104,7 @@ function addTodo() {
         <i class="far fa-trash-alt delete" job="delete"></i>
       </a>
 
-    </li>`;  
+    </li>`;
     lists.insertAdjacentHTML(position, text);
     document.querySelector(".bg-modal").style.display = "none";
     //console.log("are you mad!");
