@@ -93,7 +93,13 @@ const deleteTodo = (node) => {
 //Add a to-do
 
 function addTodo() {
-  if (itemInput.value !== "") {
+  if (
+    itemInput.value.trim() === "" ||
+    itemInput.value.trim() === null ||
+    itemInput.value.trim() === "  "
+  ) {
+    return false;
+  } else {
     const position = "beforeEnd";
     const text = `<li class="listItems">
     <div>
