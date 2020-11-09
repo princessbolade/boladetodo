@@ -38,7 +38,7 @@ const monthNames = [
 const d = new Date();
 const dayName = days[d.getDay()];
 const monthName = monthNames[d.getMonth()];
-const day = (d.getDay() + 1).toString();
+const day = d.getDate();
 date.textContent = `${dayName}, ${day} ${monthName}`;
 
 // Number of task
